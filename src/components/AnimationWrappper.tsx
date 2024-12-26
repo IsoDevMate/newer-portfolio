@@ -18,8 +18,8 @@ export const AnimationWrapper: React.FC<AnimationWrapperProps> = ({
   className = "",
   threshold = 0.4,
   delay = 0,
-  duration = 0.9,
-  staggerChildren = 0.7,
+  duration = 0.5,
+  staggerChildren = 0.4,
   customVariants
 }) => {
   const [ref, inView] = useInView({

@@ -1,5 +1,4 @@
 
-// src/components/Brands/Brands.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import aws from '../assets/image.png';
@@ -68,14 +67,13 @@ export const Brands = () => {
                   alt={brand.name} 
                   className="h-20 w-auto object-contain opacity-60 group-hover:opacity-100 transition-all duration-300 filter grayscale group-hover:grayscale-0"
                 />
-              </div>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
+              <p
                 className="text-sm text-center text-gray-400 absolute -bottom-6"
               >
                 {brand.description}
-              </motion.p>
+              </p>
+              </div>
+        
             </motion.div>
           ))}
         </div>

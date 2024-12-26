@@ -23,7 +23,7 @@ export const Footer = () => {
               Phone
             </a>
             <a href="https://updatedportfolio-ecru.vercel.app/" className="text-gray-400 hover:text-blue-400 transition-colors">
-              Portfolio
+             v1  Portfolio
             </a>
           </div>
         </div>

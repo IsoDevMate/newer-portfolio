@@ -16,7 +16,7 @@ export const Home: React.FC  = () => {
             <AboutSection />
             <ExperienceSection />
             <ProjectsSection />
-            <Services /> 
+          {/*  <Services />   */}
             <Contact />  
         </div>
     );
