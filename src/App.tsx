@@ -1,3 +1,4 @@
+// src/App.tsx
 import React, { FC, Suspense } from 'react';
 import { BasicLayout } from './layout';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
@@ -56,9 +57,8 @@ const App: FC = () => {
         >
           <ErrorBoundary>
             <BasicLayout>
-             
               <BrowserRouter basename="/">
-              <Navbar />
+                <Navbar />
                 <AnimatePresence mode="wait">
                   <Routes>
                     <Route path="/" element={<Home />} />

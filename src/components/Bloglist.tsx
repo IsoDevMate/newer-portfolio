@@ -1,10 +1,11 @@
+// src/components/BlogList.tsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { BlogCard } from './Blogcard';
-import stripeimg from  "../assets/images.png"
-import framerimg  from "../assets/maxresdefault.jpg"
-import  firebaseimg from "../assets/social.png"
-import strpcheckoutimg from "../assets/imagesss.png"
+import stripeimg from "../assets/images.png";
+import framerimg from "../assets/maxresdefault.jpg";
+import firebaseimg from "../assets/social.png";
+import strpcheckoutimg from "../assets/imagesss.png";
 
 interface BlogPost {
   id: string;
