@@ -20,17 +20,14 @@ class ErrorBoundary extends Component {
     render() {
         if (this.state.hasError) {
             // Customize your fallback UI
-            return (
-                <div style={{ textAlign: 'center', padding: '50px' }}>
-                    <h1 style={{ color: '#ff6f61' }}>Oops! Something went wrong.</h1>
-                    <p style={{ fontSize: '18px', color: '#333' }}>We're sorry for the inconvenience. Please try again later.</p>
-                    <details style={{ whiteSpace: 'pre-wrap', marginTop: '20px', color: '#666' }}>
-                        {this.state.error && this.state.error.toString()}
-                        <br />
-                        {this.state.errorInfo?.componentStack}
-                    </details>
-                </div>
-            );
+            return (<div>
+          <h1>Something went wrong.</h1>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo?.componentStack}
+          </details>
+        </div>);
         }
         // Render children if no error
         return this.props.children;

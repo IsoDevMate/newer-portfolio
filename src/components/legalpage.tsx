@@ -179,10 +179,10 @@ const LegalPage: React.FC<{
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div variants={sectionVariants} className="mb-12">
-          <Typography variant="h1" className="text-4xl font-bold text-white mb-6">
+          <Typography variant="h1" className="text-4xl font-bold text-white mb-6" placeholder="" onPointerEnterCapture={() => { }} onPointerLeaveCapture={() => { }}>
             {title}
           </Typography>
-          <Typography className="text-gray-400">
+          <Typography className="text-gray-400" placeholder="" onPointerEnterCapture={() => { }} onPointerLeaveCapture={() => { }}>
             {introduction}
           </Typography>
         </motion.div>
@@ -192,7 +192,8 @@ const LegalPage: React.FC<{
           variants={sectionVariants}
           className="mb-12 p-6 bg-gray-800/50 rounded-lg backdrop-blur-sm"
         >
-          <Typography variant="h4" className="text-white mb-4">
+          <Typography variant="h4" className="text-white
+          mb-4" placeholder="" onPointerEnterCapture={() => { }} onPointerLeaveCapture={() => { }}>
             Table of Contents
           </Typography>
           <nav className="space-y-2">
@@ -216,14 +217,14 @@ const LegalPage: React.FC<{
             variants={sectionVariants}
             className="mb-12"
           >
-            <Typography variant="h2" className="text-2xl font-bold text-white mb-4">
+            <Typography variant="h2" className="text-2xl font-bold text-white mb-4" placeholder="" onPointerEnterCapture={() => {}} onPointerLeaveCapture={() => {}}>
               {section.title}
             </Typography>
             <div className="prose prose-invert max-w-none">
               {section.content}
               {section.subsections?.map((subsection) => (
                 <div key={subsection.id} className="mt-6">
-                  <Typography variant="h3" className="text-xl font-semibold text-white mb-3">
+                  <Typography variant="h3" className="text-xl font-semibold text-white mb-3" placeholder="" onPointerEnterCapture={() => { }} onPointerLeaveCapture={() => { }}>
                     {subsection.title}
                   </Typography>
                   <div className="text-gray-400">

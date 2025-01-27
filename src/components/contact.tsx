@@ -243,7 +243,7 @@ export const Contact: React.FC = () => {
 
   const initialState: ActionResponse = {};
 
-  const [state, formAction] = useFormState(sendContactForm, initialState);
+  const [state, formAction] = useFormState((state: ActionResponse, formData: FormData) => sendContactForm(formData), initialState);
 
   React.useEffect(() => {
     if (state?.success) {

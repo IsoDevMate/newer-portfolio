@@ -13,7 +13,6 @@ const containerVariants = {
         }
     }
 };
-
 const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -21,7 +20,6 @@ const itemVariants = {
         y: 0
     }
 };
-
 export const AboutSection = () => {
     const [ref, inView] = useInView({
         threshold: 0.4,

@@ -1,3 +1,4 @@
+// src/App.tsx
 import React, { Suspense } from 'react';
 import { BasicLayout } from './layout';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
@@ -10,7 +11,6 @@ import { BlogPost } from './components/blogpost';
 import { Footer } from './components/footer';
 import { TermsOfService } from './components/legalpage';
 import { PrivacyPolicy } from './components/legalpage';
-
 const pageVariants = {
     initial: {
         opacity: 0,
@@ -51,9 +51,9 @@ const App = () => {
                   <Routes>
                     <Route path="/" element={<Home />}/>
                     <Route path="/blogs" element={<BlogList />}/>
-                    <Route path="/blogs/:id" element={<BlogPost />} />
-                     <Route path="/terms-of-service" element={<TermsOfService />} />
-                    <Route path="/privacy" element={<PrivacyPolicy />} />
+                    <Route path="/blogs/:id" element={<BlogPost />}/>
+                    <Route path="/terms-of-service" element={<TermsOfService />}/>
+                    <Route path="/privacy" element={<PrivacyPolicy />}/>
                   </Routes>
                 </AnimatePresence>
               </BrowserRouter>

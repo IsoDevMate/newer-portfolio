@@ -18,7 +18,7 @@ export const Footer = () => {
             <a href="https://updatedportfolio-ecru.vercel.app/" className="text-gray-400 hover:text-blue-400 transition-colors">
              v1  Portfolio
             </a>
-             <a href="/terms-of-service" className="text-gray-400 hover:text-blue-400 transition-colors">
+            <a href="/terms-of-service" className="text-gray-400 hover:text-blue-400 transition-colors">
               Terms of Service
             </a>
             <a href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors">
