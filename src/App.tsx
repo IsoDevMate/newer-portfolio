@@ -9,6 +9,8 @@ import { Navbar } from './components/Navbar';
 import { BlogList } from './components/Bloglist';
 import { BlogPost } from './components/blogpost';
 import { Footer } from './components/footer';
+import { TermsOfService } from './components/legalpage';
+import { PrivacyPolicy } from './components/legalpage';
 
 const pageVariants = {
   initial: {
@@ -64,6 +66,8 @@ const App: FC = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/blogs" element={<BlogList />} />
                     <Route path="/blogs/:id" element={<BlogPost />} />
+                    <Route path="/terms-of-service" element={<TermsOfService />} />
+                    <Route path="/privacy" element={<PrivacyPolicy />} />
                   </Routes>
                 </AnimatePresence>
               </BrowserRouter>

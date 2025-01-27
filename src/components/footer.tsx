@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Footer = () => {
   return (
-    <motion.footer 
+    <motion.footer
       className="py-12 bg-gray-900/30 backdrop-blur-sm"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -24,6 +24,12 @@ export const Footer = () => {
             </a>
             <a href="https://updatedportfolio-ecru.vercel.app/" className="text-gray-400 hover:text-blue-400 transition-colors">
              v1  Portfolio
+            </a>
+            <a href="/terms-of-service" className="text-gray-400 hover:text-blue-400 transition-colors">
+              Terms of Service
+            </a>
+            <a href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors">
+              Privacy Policy
             </a>
           </div>
         </div>

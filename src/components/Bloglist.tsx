@@ -6,7 +6,7 @@ import stripeimg from "../assets/images.png";
 import framerimg from "../assets/maxresdefault.jpg";
 import firebaseimg from "../assets/social.png";
 import strpcheckoutimg from "../assets/imagesss.png";
-
+import {MapsSection} from './maps';
 interface BlogPost {
   id: string;
   title: string;
@@ -81,6 +81,19 @@ export const BlogList = () => {
             </motion.div>
           ))}
         </div>
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2
+            className="text-blue-400 hover:underline text-lg transition-colors"
+          >
+            Locate us
+          </h2>
+          <MapsSection />
+        </motion.div>
       </div>
     </section>
   );
