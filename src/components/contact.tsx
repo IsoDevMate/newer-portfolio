@@ -298,40 +298,11 @@ export const Contact: React.FC = () => {
           Let's Connect
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-12">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            <h3 className="text-2xl mb-4 text-gray-200">Get in Touch</h3>
-            <p className="text-gray-400">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
-            </p>
-            <div className="flex items-center space-x-2 text-gray-400">
-              <Mail size={20} />
-              <a href="mailto:oumaduor5827@gmail.com" className="hover:text-white transition-colors">
-                oumaduor5827@gmail.com
-              </a>
-            </div>
-            <div className="flex space-x-6 pt-4">
-              {socialLinks.map((link) => (
-                <motion.a
-                  key={link.label}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {link.icon}
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-
+ <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        >
         <motion.form
           action={formAction}
           initial={{ opacity: 0, x: 20 }}
@@ -366,9 +337,45 @@ export const Contact: React.FC = () => {
             placeholder="Your Message"
             isTextArea
           />
-
           <SubmitButton />
-        </motion.form>
+          </motion.form>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <h3 className="text-2xl mb-4 text-gray-200">Get in Touch</h3>
+            <p className="text-gray-400">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+            </p>
+            <div className="flex items-center space-x-2 text-gray-400">
+              <Mail size={20} />
+              <a href="mailto:oumaduor5827@gmail.com" className="hover:text-white transition-colors">
+                oumaduor5827@gmail.com
+              </a>
+            </div>
+            <div className="flex space-x-6 pt-4">
+              {socialLinks.map((link) => (
+                <motion.a
+                  key={link.label}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {link.icon}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+
       </div>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)} />
     </section>

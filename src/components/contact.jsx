@@ -235,6 +235,23 @@ export const Contact = () => {
           Let's Connect
         </motion.h2>
         <div className="grid md:grid-cols-2 gap-12">
+ <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+        <motion.form action={formAction} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6">
+          {state?.error && (<div className="text-red-500 bg-red-100/10 p-3 rounded">
+              {state.error}
+            </div>)}
+
+          <FormField name="firstName" placeholder="Your First Name"/>
+
+          <FormField name="lastName" placeholder="Your Last Name"/>
+
+          <FormField name="email" type="email" placeholder="Your Email"/>
+
+          <FormField name="message" placeholder="Your Message" isTextArea/>
+          <SubmitButton />
+          </motion.form>
+          </motion.div>
+
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6">
             <h3 className="text-2xl mb-4 text-gray-200">Get in Touch</h3>
             <p className="text-gray-400">
@@ -254,21 +271,7 @@ export const Contact = () => {
           </motion.div>
         </div>
 
-        <motion.form action={formAction} initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6">
-          {state?.error && (<div className="text-red-500 bg-red-100/10 p-3 rounded">
-              {state.error}
-            </div>)}
 
-          <FormField name="firstName" placeholder="Your First Name"/>
-
-          <FormField name="lastName" placeholder="Your Last Name"/>
-
-          <FormField name="email" type="email" placeholder="Your Email"/>
-
-          <FormField name="message" placeholder="Your Message" isTextArea/>
-
-          <SubmitButton />
-        </motion.form>
       </div>
       <Modal isOpen={showModal} onClose={() => setShowModal(false)}/>
     </section>);
