@@ -103,8 +103,8 @@ src/
 
 For any inquiries or collaboration opportunities, feel free to reach out:
 - Email: oumaduor5827@gmail.com
-- LinkedIn: [Profile Link]
-- GitHub: [Profile Link]
+- LinkedIn: https://linkedin.com/in/barack-ouma-b37089212
+- GitHub: https://github.com/IsoDevMate
 
 ## License
 
